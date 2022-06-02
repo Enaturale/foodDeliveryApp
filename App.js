@@ -1,10 +1,12 @@
 import React from "react";
 import {ScrollView, View, Text, StyleSheet} from "react-native";
-import HomeScreen from "./src/screens/HomeScreen";
+import HomeScreen from './src/screens/HomeScreen/HomeScreen'
 import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {createStackNavigator} from '@react-navigation/stack';
 
-const Stack = createNativeStackNavigator();
+
+
+const Stack = createStackNavigator();
 
 
 const App = () => {
