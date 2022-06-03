@@ -1,5 +1,6 @@
 import { StyleSheet, Dimensions, Platform } from "react-native";
-const { width: screenWidth} = Dimensions.get('window');
+
+const { width: screenWidth} = Dimensions.get("window");
 
 
 const Styles = StyleSheet.create({
@@ -8,22 +9,22 @@ const Styles = StyleSheet.create({
     },
     item:{
         width: '100%',
-        height: screenWidth,
+        height: screenWidth + 20,
         //backgroundColor: '#1B4E89',
-         //alignItems: 'flex-start',
-        justifyContent:'flex-start',
-       // borderRadius: 20,
+        //alignItems: 'flex-start',
+        //justifyContent:'flex-start',
+        borderRadius: 20,
     },
     imageContainer:{
         flex: 3,
        // borderRadius: 5,
         backgroundColor: '#e3e3e3',
-       // marginBottom: Platform.select({ios:0, android:1}),
+        marginBottom: Platform.select({ios:0, android:1}),
         marginTop: 15,
         //marginLeft: 85,
     },
     image:{
-        // ...StyleSheet.absoluteFillObject,
+        ...StyleSheet.absoluteFillObject,
         resizeMode:'cover',
         height: '100%',
     },
@@ -39,6 +40,7 @@ const Styles = StyleSheet.create({
      inactiveDotStyle:{
          backgroundColor:'#009688',
      },
+    
 
 })
 

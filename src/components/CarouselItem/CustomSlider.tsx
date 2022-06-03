@@ -5,7 +5,7 @@ import Carousel from 'react-native-snap-carousel';
 import CarouselItem from "./CarouselItem";
 import CustomPaging from "./CustomPaging";
 
-const {width} = Dimensions.get('window');
+const {width} = Dimensions.get("window");
 
 const CustomSlider = ({data}) => {
     const [slideIndex, setSlideIndex] = React.useState(0);
@@ -22,9 +22,9 @@ const CustomSlider = ({data}) => {
 
     return(
         <View style={Styles.mainContainer}>
-            <Carousel 
-            {...settings}            
-          />
+            <Carousel  
+               {...settings}            
+            />
 
         <CustomPaging data={data}  activeSlide={slideIndex} />
 

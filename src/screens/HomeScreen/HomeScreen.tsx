@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, Pressable } from "react-native";
 import CustomSlider from "../../components/CarouselItem/CustomSlider";
 import Styles from "./Styles";
 import carousel from "../../components/CarouselItem/carousel";
@@ -22,6 +22,12 @@ const HomeScreen = ({navigation}) => {
                 <Text style={Styles.subtitle}>Enjoy different dishes from our top chefs!</Text>
                 <Text style={Styles.subtitle}>Affordable and Fast!</Text>
             </View>
+
+            <Pressable style={Styles.pressable}>
+                <Text style={Styles.pressableText}>
+                    Get Started
+                </Text>
+            </Pressable>
             
         </View>
     )

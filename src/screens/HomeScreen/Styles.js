@@ -15,7 +15,21 @@ const Styles = StyleSheet.create({
     subtitle:{
         color: 'white',
         fontSize: 20,
-        fontFamily:'PlayfairDisplay-Regular',
+        fontFamily:'Nunito-Light',
+
+    },
+    pressableText:{
+        fontSize: 30,
+        color: 'black',
+        paddingHorizontal: 30,
+        fontFamily: 'Nunito-Bold'
+    },
+    pressable:{
+        backgroundColor:'#F4BA19',
+        width: 300,
+        height: 50,
+        marginVertical: 10,
+        borderRadius: 5,
 
     }
 
