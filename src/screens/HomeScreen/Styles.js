@@ -5,30 +5,31 @@ const Styles = StyleSheet.create({
         height: '100%',
         backgroundColor:'#000000',
         paddingHorizontal: 20,
-        paddingVertical: 20,
+        paddingVertical: 10,
     },
     title:{
         color:'white',
-        fontSize:30,
-        fontFamily:'PlayfairDisplay-Medium',
+        fontSize:35,
+        fontFamily:'PlayfairDisplay-ExtraBold',
     },
     subtitle:{
         color: 'white',
         fontSize: 20,
-        fontFamily:'Nunito-Light',
+        fontFamily:'Nunito-Regular',
+        marginVertical: 3,
 
     },
     pressableText:{
-        fontSize: 30,
+        fontSize: 25,
         color: 'black',
-        paddingHorizontal: 30,
-        fontFamily: 'Nunito-Bold'
+        paddingHorizontal: 40,
+        fontFamily: 'Nunito-ExtraBoldItalic'
     },
     pressable:{
         backgroundColor:'#F4BA19',
-        width: 300,
+        width: 260,
         height: 50,
-        marginVertical: 10,
+        marginVertical: 20,
         borderRadius: 5,
 
     }

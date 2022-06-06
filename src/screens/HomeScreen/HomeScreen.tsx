@@ -7,6 +7,9 @@ import carousel from "../../components/CarouselItem/carousel";
 
 
 const HomeScreen = ({navigation}) => {
+    const gotoDashboard = () => {
+        navigation.navigate("Dashboard")
+    }
     
     return(
         <View style={Styles.container}>
@@ -20,10 +23,10 @@ const HomeScreen = ({navigation}) => {
             </View>
             <View>
                 <Text style={Styles.subtitle}>Enjoy different dishes from our top chefs!</Text>
-                <Text style={Styles.subtitle}>Affordable and Fast!</Text>
+                <Text style={Styles.subtitle}>Inter-state delivery!</Text>
             </View>
 
-            <Pressable style={Styles.pressable}>
+            <Pressable style={Styles.pressable} onPress={gotoDashboard}>
                 <Text style={Styles.pressableText}>
                     Get Started
                 </Text>

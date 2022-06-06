@@ -14,12 +14,12 @@ const carousel = [
     },
     {
         id: "3",
-        image: 'https://cdn.pixabay.com/photo/2020/03/25/21/05/pizza-4968645__340.jpg',
+        image: 'https://cdn.pixabay.com/photo/2017/06/30/13/50/coffee-2458311__340.jpg',
 
     },
     {
         id: "4",
-        image: 'https://cdn.pixabay.com/photo/2020/03/25/21/05/pizza-4968645__340.jpg',
+        image: 'https://cdn.pixabay.com/photo/2016/11/29/13/05/breakfast-1869717__340.jpg',
 
     }
 ]

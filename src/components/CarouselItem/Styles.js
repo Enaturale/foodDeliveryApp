@@ -17,7 +17,7 @@ const Styles = StyleSheet.create({
     },
     imageContainer:{
         flex: 3,
-       // borderRadius: 5,
+       borderRadius: 5,
         backgroundColor: '#e3e3e3',
         marginBottom: Platform.select({ios:0, android:1}),
         marginTop: 15,
@@ -32,13 +32,13 @@ const Styles = StyleSheet.create({
         // backgroundColor:'#D9D9D9',
      },
      dotStyle:{
-         width: 10,
-         height: 10,
+         width: 12,
+         height: 12,
          borderRadius: 5,
-         backgroundColor:'#004D40',
+         backgroundColor:'#F4BA19',
      },
      inactiveDotStyle:{
-         backgroundColor:'#009688',
+         backgroundColor:'#FFF176',
      },
     
 
