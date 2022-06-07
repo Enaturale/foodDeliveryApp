@@ -51,6 +51,20 @@ const Dashboard = ({ navigation }) => {
                 <View style={{ flexDirection: 'row', marginTop: 20, }}>
                     <Text style={Styles.otherTitles}>Top Categories</Text>
                     <Category name="category" color="#D33115" size={20} style={{ marginTop: 3 }} />
+                    <Pressable>
+                        <Text style={{ marginHorizontal: 150, fontSize: 16, marginVertical: 2 }}>View All</Text>
+                    </Pressable>
+                </View>
+                <View style={{ flexDirection: 'row', marginTop: 20,}}>
+                    <Pressable style={Styles.pressableCategory}>
+                        <Text style={Styles.pressableText}>Drinks</Text>
+                    </Pressable>
+                    <Pressable style={Styles.pressableCategory}>
+                        <Text style={Styles.pressableText}>Foods</Text>
+                    </Pressable>
+                    <Pressable style={Styles.pressableCategory}>
+                        <Text style={Styles.pressableText}>Receipes</Text>
+                    </Pressable>
                 </View>
 
                 <View style={{ flexDirection: 'row', marginTop: 20, }}>
@@ -58,6 +72,9 @@ const Dashboard = ({ navigation }) => {
                     {/* <Pressable onPress={gotoHomescreen}> */}
                     <Food name="fastfood" color="#388E3C" size={20} style={{ marginTop: 3 }} />
                     {/* </Pressable> */}
+                    <Pressable>
+                        <Text style={{ marginHorizontal: 180, fontSize: 16, marginVertical: 2 }}>View All</Text>
+                    </Pressable>
                 </View>
             </View>
 

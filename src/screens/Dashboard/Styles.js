@@ -29,6 +29,22 @@ const Styles = StyleSheet.create({
         color: "#000000",
         fontFamily: 'Nunito-BoldItalic',  
 
+    },
+    pressableCategory:{
+        marginHorizontal: 20,
+        borderWidth: 1,
+        width: 100,
+        borderRadius: 10,
+        height: 40,
+        backgroundColor:'#040A07', 
+        alignContent:'center',
+        justifyContent:'center',
+    },
+    pressableText:{
+        fontSize: 20,
+        fontFamily: 'Nunito-Bold',
+        color:'#F4BA19',   
+        marginHorizontal: 7,    
     }
 })
 
