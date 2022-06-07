@@ -2,19 +2,20 @@ import {StyleSheet} from 'react-native';
 
 const Styles = StyleSheet.create({
     mainContainer:{
-        height: 100,
+        height: 150,
         backgroundColor: '#000000',
         borderBottomWidth: 1,
-        borderBottomEndRadius: 20,
-        borderBottomStartRadius: 20,
+        borderBottomEndRadius: 30,
+        borderBottomStartRadius: 30,
     },
     headerContainer:{
         flexDirection: 'row',
         marginHorizontal: 20,
-        marginVertical: 20,
+        marginTop: 20,
+        marginBottom: 2,
     },
     title:{
-        fontSize: 30,
+        fontSize: 28,
         //fontWeight: 'bold',
         marginHorizontal: 50,
         color: '#F4BA19',
@@ -22,7 +23,7 @@ const Styles = StyleSheet.create({
         
     },
     otherTitles:{
-        fontSize: 23,
+        fontSize: 20,
         marginStart: 20,
         marginEnd: 10,
         color: "#000000",

@@ -23,7 +23,8 @@ const Styles = StyleSheet.create({
         fontSize: 25,
         color: 'black',
         paddingHorizontal: 40,
-        fontFamily: 'Nunito-ExtraBoldItalic'
+        fontFamily: 'Nunito-ExtraBoldItalic',
+        marginTop: 5,
     },
     pressable:{
         backgroundColor:'#F4BA19',

@@ -17,7 +17,7 @@ const Styles = StyleSheet.create({
     },
     imageContainer:{
         flex: 3,
-       borderRadius: 5,
+       borderRadius: 20,
         backgroundColor: '#e3e3e3',
         marginBottom: Platform.select({ios:0, android:1}),
         marginTop: 15,
