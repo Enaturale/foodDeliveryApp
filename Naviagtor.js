@@ -1,6 +1,7 @@
 import React from 'react';
 import Dashboard from './src/screens/Dashboard/Dashboard';
 import Order from './src/screens/Order/Order';
+import Dishes from './src/components/Dishes/Dishes';
 
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -16,6 +17,7 @@ function HomeStackScreen () {
       <Stack.Navigator>
           <Stack.Screen name="Homescreen" component={Dashboard} options={{headerShown: false}} />
           <Stack.Screen name="Order" component={Order} options={{headerShown: false}} />
+          <Stack.Screen name="New Dishes" component={Dishes} options={{}} />
       </Stack.Navigator>
   )
 }
@@ -41,7 +43,8 @@ export function Navigation () {
                 borderTopLeftRadius: 20,
             },
             tabBarLabelStyle:{
-                fontSize: 20,
+                fontSize: 18,
+                fontFamily:"Nunito-BoldItalic"
             }
         }}
         >
@@ -51,7 +54,7 @@ export function Navigation () {
                 options={{
                     headerShown: false,
                     tabBarIcon: () =>(
-                        <Home  name="shopping-cart" color="#F4BA19" size={15} />
+                        <Home  name="home" color="#F4BA19" size={20} />
 
                     )
                     }} 
@@ -61,8 +64,9 @@ export function Navigation () {
                 component={CartStackScreen} 
                 options={{
                     headerShown: false,
+                    tabBarActiveTintColor: "#F4BA19",
                     tabBarIcon: () =>(
-                        <Cart  name="home" color="#F4BA19" size={20} />
+                        <Cart  name="shopping-cart" color="#F4BA19" size={20} />
 
                     )
                     }} 

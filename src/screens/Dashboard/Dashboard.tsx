@@ -11,6 +11,7 @@ import ShoppingCart from "react-native-vector-icons/MaterialIcons";
 import Styles from "./Styles";
 
 import Searchbar from "../../components/SearchBar/Searchbar";
+import Section from "../../components/Section/Section";
 
 
 const Dashboard = ({ navigation }) => {
@@ -47,6 +48,12 @@ const Dashboard = ({ navigation }) => {
 
             </View>
 
+            {/* recommended section */}
+            <View>
+                <Section />
+            </View>
+
+            {/* categories section */}
             <View>
                 <View style={{ flexDirection: 'row', marginTop: 20, }}>
                     <Text style={Styles.otherTitles}>Top Categories</Text>
@@ -67,7 +74,7 @@ const Dashboard = ({ navigation }) => {
                     </Pressable>
                 </View>
 
-                <View style={{ flexDirection: 'row', marginTop: 20, }}>
+                <View style={{ flexDirection: 'row', marginTop: 25, }}>
                     <Text style={Styles.otherTitles} >New Dishes</Text>
                     {/* <Pressable onPress={gotoHomescreen}> */}
                     <Food name="fastfood" color="#388E3C" size={20} style={{ marginTop: 3 }} />

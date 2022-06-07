@@ -2,6 +2,9 @@ import React from "react";
 import {ScrollView, View, Text, StyleSheet} from "react-native";
 import HomeScreen from './src/screens/HomeScreen/HomeScreen';
 import Dashboard from "./src/screens/Dashboard/Dashboard";
+import Dishes from "./src/components/Dishes/Dishes";
+import Order from "./src/screens/Order/Order";
+
 import { Navigation } from "./Naviagtor";
 
 import {NavigationContainer} from '@react-navigation/native';
