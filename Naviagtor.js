@@ -18,7 +18,14 @@ function HomeStackScreen () {
       <Stack.Navigator>
           <Stack.Screen name="Homescreen" component={Dashboard} options={{headerShown: false}} />
           <Stack.Screen name="Order" component={Order} options={{headerShown: false}} />  
-          <Stack.Screen name=" Top Dishes" component={TopDishes} options={{headerShown: false}} />          
+          <Stack.Screen 
+             name=" Top Dishes" 
+             component={TopDishes} 
+             options={{
+                 headerShown: false,
+                 
+                }}
+            />          
 
       </Stack.Navigator>
   )

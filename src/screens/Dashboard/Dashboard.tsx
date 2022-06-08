@@ -43,12 +43,12 @@ const Dashboard = ({ navigation }) => {
                         <Text style={Styles.title}>Our Kitchen</Text>
                     </View>
                     <View>
-                        <Pressable onPress={gotoOrderPage}>                            
-                         <ShoppingCart 
-                            name="shopping-cart" 
-                            size={33} 
-                            color="#F4BA19" 
-                            style={{ marginLeft: 54, }}
+                        <Pressable onPress={gotoOrderPage}>
+                            <ShoppingCart
+                                name="shopping-cart"
+                                size={33}
+                                color="#F4BA19"
+                                style={{ marginLeft: 54, }}
                             />
                         </Pressable>
                     </View>
@@ -80,7 +80,7 @@ const Dashboard = ({ navigation }) => {
                         <Text style={{ marginHorizontal: 150, fontSize: 16, marginVertical: 2 }}>View All</Text>
                     </Pressable>
                 </View>
-                <View style={{ flexDirection: 'row', marginTop: 20,}}>
+                <View style={{ flexDirection: 'row', marginTop: 20, }}>
                     <Pressable style={Styles.pressableCategory}>
                         <Text style={Styles.pressableText}>Drinks</Text>
                     </Pressable>
@@ -93,19 +93,20 @@ const Dashboard = ({ navigation }) => {
                 </View>
 
 
-               {/* Dishes  Section */}
+                {/* Dishes  Section */}
+                <View style={{borderWidth: 1,}}>
                 <View style={{ flexDirection: 'row', marginTop: 25, }}>
                     <Text style={Styles.otherTitles} >New Dishes</Text>
-                  
+
                     <Food name="fastfood" color="#388E3C" size={20} style={{ marginTop: 3 }} />
-                    
+
                     <Pressable onPress={gotoDishPage}>
                         <Text style={{ marginHorizontal: 180, fontSize: 16, marginVertical: 2 }}>View All</Text>
                     </Pressable>
 
                 </View>
 
-                {/* Showing the dishes */}               
+                {/* Showing the dishes */}
                 {/* <View style={{alignContent:'center', justifyContent:'center'}}>
                     <Pressable>
                         <View style={{marginHorizontal: 20, marginVertical: 20, }}>
@@ -120,7 +121,11 @@ const Dashboard = ({ navigation }) => {
 
                 </View> */}
 
-                <CustomSlider dishes={DishesData} />
+                <View style={Styles.slider}>
+                    <CustomSlider dishes={DishesData} />
+                </View>
+                </View>
+
 
             </View>
 

@@ -60,6 +60,9 @@ const Styles = StyleSheet.create({
     },
     imageAmount:{
         fontSize: 18,
+    },
+    slider:{
+       
     }
 
 })

@@ -20,7 +20,14 @@ const App = () => {
         <Stack.Screen name ="Home" component={HomeScreen} options={{headerShown:false}} />
         <Stack.Screen name ="Dashboard" component={Navigation} options={{headerShown:false}} />
         <Stack.Screen name="Your Orders"  component={Order} />  
-        <Stack.Screen name="Top Dishes"  component={TopDishes} />  
+        <Stack.Screen name="Top Dishes"  component={TopDishes} options={{headerStyle:{
+          backgroundColor:'#000000',
+        },
+        headerTitleStyle:{
+          color:'#F4BA19',
+        },
+        headerTintColor:"#F4BA19"
+        }} />  
 
       
 
