@@ -1,7 +1,8 @@
 import React from 'react';
 import Dashboard from './src/screens/Dashboard/Dashboard';
 import Order from './src/screens/Order/Order';
-import Dishes from './src/components/Dishes/Dishes';
+import TopDishes from './src/screens/TopDishes/TopDishes';
+
 
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -16,8 +17,9 @@ function HomeStackScreen () {
   return(
       <Stack.Navigator>
           <Stack.Screen name="Homescreen" component={Dashboard} options={{headerShown: false}} />
-          <Stack.Screen name="Order" component={Order} options={{headerShown: false}} />
-          <Stack.Screen name="New Dishes" component={Dishes} options={{}} />
+          <Stack.Screen name="Order" component={Order} options={{headerShown: false}} />  
+          <Stack.Screen name=" Top Dishes" component={TopDishes} options={{headerShown: false}} />          
+
       </Stack.Navigator>
   )
 }
@@ -30,6 +32,15 @@ function CartStackScreen () {
         </Stack.Navigator>
     )     
 }
+
+// function DishesStackScreen () {
+//     return(
+//         <Stack.Navigator>
+//             <Stack.Screen  name= "Dishes" component={Dishes} options={{headerShown: false}}/>
+//         </Stack.Navigator>
+
+//     )
+// }
 
 export function Navigation () {
     return(
@@ -53,9 +64,8 @@ export function Navigation () {
                 component={HomeStackScreen} 
                 options={{
                     headerShown: false,
-                    tabBarIcon: () =>(
+                    tabBarIcon: () => (
                         <Home  name="home" color="#F4BA19" size={20} />
-
                     )
                     }} 
             />
@@ -67,7 +77,6 @@ export function Navigation () {
                     tabBarActiveTintColor: "#F4BA19",
                     tabBarIcon: () =>(
                         <Cart  name="shopping-cart" color="#F4BA19" size={20} />
-
                     )
                     }} 
             />

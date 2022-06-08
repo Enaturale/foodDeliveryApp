@@ -14,10 +14,18 @@ import Searchbar from "../../components/SearchBar/Searchbar";
 import Section from "../../components/Section/Section";
 
 
+
+
 const Dashboard = ({ navigation }) => {
-    const gotoHomescreen = () => {
-        navigation.navigate("Home");
+
+    const gotoDishPage = () => {
+        navigation.navigate("Top Dishes")
     }
+
+    const gotoOrderPage = () => {
+        navigation.navigate("Your Orders")
+    }
+
     const [searchPhrase, setSearchPhrase] = useState("");
     const [clicked, setClicked] = useState(false);
 
@@ -32,7 +40,14 @@ const Dashboard = ({ navigation }) => {
                         <Text style={Styles.title}>Our Kitchen</Text>
                     </View>
                     <View>
-                        <ShoppingCart name="shopping-cart" size={33} color="#F4BA19" style={{ marginLeft: 54, }} />
+                        <Pressable onPress={gotoOrderPage}>                            
+                         <ShoppingCart 
+                            name="shopping-cart" 
+                            size={33} 
+                            color="#F4BA19" 
+                            style={{ marginLeft: 54, }}
+                            />
+                        </Pressable>
                     </View>
                 </View>
 
@@ -74,12 +89,14 @@ const Dashboard = ({ navigation }) => {
                     </Pressable>
                 </View>
 
+
+               {/* Dishes  Section */}
                 <View style={{ flexDirection: 'row', marginTop: 25, }}>
                     <Text style={Styles.otherTitles} >New Dishes</Text>
-                    {/* <Pressable onPress={gotoHomescreen}> */}
+                  
                     <Food name="fastfood" color="#388E3C" size={20} style={{ marginTop: 3 }} />
-                    {/* </Pressable> */}
-                    <Pressable>
+                    
+                    <Pressable onPress={gotoDishPage}>
                         <Text style={{ marginHorizontal: 180, fontSize: 16, marginVertical: 2 }}>View All</Text>
                     </Pressable>
                 </View>
