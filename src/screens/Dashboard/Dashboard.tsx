@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { View, Text, Pressable, SafeAreaView, ScrollView } from "react-native";
+import { View, Text, Pressable, SafeAreaView, ScrollView, Image } from "react-native";
 import Menu from "react-native-vector-icons/MaterialIcons";
 import Close from "react-native-vector-icons/MaterialIcons";
 import Favorite from "react-native-vector-icons/MaterialIcons";
@@ -13,6 +13,9 @@ import Styles from "./Styles";
 import Searchbar from "../../components/SearchBar/Searchbar";
 import Section from "../../components/Section/Section";
 
+import Dishdata from "../../data/Dish";
+import CustomSlider from "../../components/CarouselDish/CustomSlider";
+import DishesData from "../../data/Dishes";
 
 
 
@@ -99,7 +102,26 @@ const Dashboard = ({ navigation }) => {
                     <Pressable onPress={gotoDishPage}>
                         <Text style={{ marginHorizontal: 180, fontSize: 16, marginVertical: 2 }}>View All</Text>
                     </Pressable>
+
                 </View>
+
+                {/* Showing the dishes */}               
+                {/* <View style={{alignContent:'center', justifyContent:'center'}}>
+                    <Pressable>
+                        <View style={{marginHorizontal: 20, marginVertical: 20, }}>
+                            <Image source={{uri: Dishdata.image}} style={Styles.image}/>
+                            <View style={{flexDirection: 'row', justifyContent:'space-between', width: 280, marginVertical: 5,}}>
+                            <Text style={Styles.imageTitle}>{Dishdata.title}</Text>
+                            <Text style={Styles.imageAmount}>${Dishdata.amount}</Text>
+                            </View>
+                            
+                        </View>
+                    </Pressable>
+
+                </View> */}
+
+                <CustomSlider dishes={DishesData} />
+
             </View>
 
 

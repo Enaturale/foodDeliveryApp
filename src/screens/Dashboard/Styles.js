@@ -45,7 +45,23 @@ const Styles = StyleSheet.create({
         fontFamily: 'Nunito-Bold',
         color:'#F4BA19',   
         marginHorizontal: 7,    
+    },
+
+    //styling the image after the top categories are created
+    image:{
+        height: 250,
+        width: 300,
+        borderRadius: 20,
+    },
+    imageTitle:{
+        fontSize: 20, 
+        fontFamily: 'Nunito-Bold', 
+        
+    },
+    imageAmount:{
+        fontSize: 18,
     }
+
 })
 
 export default Styles;
