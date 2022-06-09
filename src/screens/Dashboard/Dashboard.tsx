@@ -94,7 +94,7 @@ const Dashboard = ({ navigation }) => {
 
 
                 {/* Dishes  Section */}
-                <View style={{borderWidth: 1,}}>
+                <View style={{marginTop: 15, height:'auto', backgroundColor:'white', borderRadius: 20,}}>
                 <View style={{ flexDirection: 'row', marginTop: 25, }}>
                     <Text style={Styles.otherTitles} >New Dishes</Text>
 

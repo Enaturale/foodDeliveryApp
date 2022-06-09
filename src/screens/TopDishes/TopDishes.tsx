@@ -29,8 +29,11 @@ const TopDishes = ({navigation}) => {
                     <View style={{marginVertical: 20,}}>
                         <Image source={{uri: item.image}} style={styles.imageContainer}/>
                         <Text style={styles.title}>{item.title}</Text>
-                        <View style={{flexDirection: 'row', justifyContent:'space-between', width: 350,}}>
+                        <View style={{flexDirection: 'row', justifyContent:'space-between', width: 350,marginVertical: 5,}}>
                         <Text style={styles.amount}>${item.amount}</Text> 
+                        <Pressable style={styles.pressBuyNow}>
+                            <Text style={styles.buyNow}>Buy Now</Text>
+                        </Pressable>
                         <Pressable onPress={addtoCart}>                                                    
                          <ShoppingCart 
                             name="shopping-cart" 
@@ -72,6 +75,20 @@ const styles = StyleSheet.create({
     },
     amount:{
         fontSize: 20,
+
+    },
+    buyNow:{
+        fontSize: 18,  
+        fontFamily: 'Nunito-Black' ,  
+        marginHorizontal: 10,
+        marginVertical: 5,
+
+    },
+    pressBuyNow:{
+        backgroundColor:'#F4BA19',
+        borderRadius: 5,
+        height: 35,
+        width: 100,
 
     }
 
