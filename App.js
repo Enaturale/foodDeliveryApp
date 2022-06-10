@@ -4,6 +4,7 @@ import HomeScreen from './src/screens/HomeScreen/HomeScreen';
 import Dashboard from "./src/screens/Dashboard/Dashboard";
 import Order from "./src/screens/Order/Order";
 import TopDishes from "./src/screens/TopDishes/TopDishes";
+import Categories from "./src/screens/Categories/Categories";
 
 
 import { Navigation } from "./Naviagtor";
@@ -31,7 +32,16 @@ const App = () => {
 
       
 
-        {/* <Stack.Screen name="Top Dishes" component={NewDishes} /> */}
+        <Stack.Screen name="Top Categories" component={Categories}
+          options={{headerStyle:{
+            backgroundColor:'#000000',
+          },
+          headerTitleStyle:{
+            color:'#F4BA19',
+          },
+          headerTintColor:"#F4BA19"
+          }}
+         />
         
       </Stack.Navigator>      
     </NavigationContainer>

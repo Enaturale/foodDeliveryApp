@@ -28,6 +28,10 @@ const Dashboard = ({ navigation }) => {
     const gotoOrderPage = () => {
         navigation.navigate("Your Orders")
     }
+    
+    const categoriesPage = () => {
+        navigation.navigate("Top Categories")
+    }
 
     const [searchPhrase, setSearchPhrase] = useState("");
     const [clicked, setClicked] = useState(false);
@@ -76,7 +80,7 @@ const Dashboard = ({ navigation }) => {
                 <View style={{ flexDirection: 'row', marginTop: 20, }}>
                     <Text style={Styles.otherTitles}>Top Categories</Text>
                     <Category name="category" color="#D33115" size={20} style={{ marginTop: 3 }} />
-                    <Pressable>
+                    <Pressable onPress={categoriesPage}>
                         <Text style={{ marginHorizontal: 150, fontSize: 16, marginVertical: 2 }}>View All</Text>
                     </Pressable>
                 </View>

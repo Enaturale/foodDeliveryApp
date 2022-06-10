@@ -15,7 +15,8 @@ const TopDishes = ({navigation}) => {
                     onPress: () => {console.log("Okay Pressed")}
                 }
             ]
-        )       
+        );
+        navigation.navigate("Your Orders");
 
     };
 
@@ -26,7 +27,7 @@ const TopDishes = ({navigation}) => {
             data={DishesData}
             renderItem={({item}) => {
                 return(
-                    <View style={{marginVertical: 20,}}>
+                    <View style={{marginVertical: 20, marginBottom: 20,}}>
                         <Image source={{uri: item.image}} style={styles.imageContainer}/>
                         <Text style={styles.title}>{item.title}</Text>
                         <View style={{flexDirection: 'row', justifyContent:'space-between', width: 350,marginVertical: 5,}}>
@@ -42,12 +43,15 @@ const TopDishes = ({navigation}) => {
                             style={{  }}
                             />
                         </Pressable>
-                        </View>                       
+                        </View>   
+                                          
                     </View>
+                    
                 )
             }}
             showsVerticalScrollIndicator={false}
             />
+             
         </View>
     )
 }
@@ -56,6 +60,7 @@ const styles = StyleSheet.create({
     container:{
         marginHorizontal: 20,
         marginVertical: 15,
+        paddingBottom: 40,
     },
     bigTitle:{
         fontSize: 25,
