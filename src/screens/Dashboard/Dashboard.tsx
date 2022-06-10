@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { View, Text, Pressable, SafeAreaView, ScrollView, Image } from "react-native";
+import { View, Text, Pressable, SafeAreaView, ScrollView, Image, Alert } from "react-native";
 import Menu from "react-native-vector-icons/MaterialIcons";
 import Close from "react-native-vector-icons/MaterialIcons";
 import Favorite from "react-native-vector-icons/MaterialIcons";
@@ -16,6 +16,7 @@ import Section from "../../components/Section/Section";
 import Dishdata from "../../data/Dish";
 import CustomSlider from "../../components/CarouselDish/CustomSlider";
 import DishesData from "../../data/Dishes";
+import Button from "../../components/Buttons/Button";
 
 
 
@@ -28,10 +29,24 @@ const Dashboard = ({ navigation }) => {
     const gotoOrderPage = () => {
         navigation.navigate("Your Orders")
     }
-    
+
     const categoriesPage = () => {
         navigation.navigate("Top Categories")
     }
+    const addtoCart = () => {
+        Alert.alert(
+            "Cart",
+            "Your preference has been added to the cart",
+            [
+                {
+                    text: "Ok",
+                    onPress: () => { console.log("Okay Pressed") }
+                }
+            ]
+        );
+        navigation.navigate("Your Orders");
+
+    };
 
     const [searchPhrase, setSearchPhrase] = useState("");
     const [clicked, setClicked] = useState(false);
@@ -98,20 +113,20 @@ const Dashboard = ({ navigation }) => {
 
 
                 {/* Dishes  Section */}
-                <View style={{marginTop: 15, height:'auto', backgroundColor:'white', borderRadius: 20,}}>
-                <View style={{ flexDirection: 'row', marginTop: 25, }}>
-                    <Text style={Styles.otherTitles} >New Dishes</Text>
+                <View style={{ marginTop: 15, height: 'auto', backgroundColor: 'white', borderRadius: 20, }}>
+                    <View style={{ flexDirection: 'row', marginTop: 25, }}>
+                        <Text style={Styles.otherTitles} >New Dishes</Text>
 
-                    <Food name="fastfood" color="#388E3C" size={20} style={{ marginTop: 3 }} />
+                        <Food name="fastfood" color="#388E3C" size={20} style={{ marginTop: 3 }} />
 
-                    <Pressable onPress={gotoDishPage}>
-                        <Text style={{ marginHorizontal: 180, fontSize: 16, marginVertical: 2 }}>View All</Text>
-                    </Pressable>
+                        <Pressable onPress={gotoDishPage}>
+                            <Text style={{ marginHorizontal: 180, fontSize: 16, marginVertical: 2 }}>View All</Text>
+                        </Pressable>
 
-                </View>
+                    </View>
 
-                {/* Showing the dishes */}
-                {/* <View style={{alignContent:'center', justifyContent:'center'}}>
+                    {/* Showing the dishes */}
+                    {/* <View style={{alignContent:'center', justifyContent:'center'}}>
                     <Pressable>
                         <View style={{marginHorizontal: 20, marginVertical: 20, }}>
                             <Image source={{uri: Dishdata.image}} style={Styles.image}/>
@@ -125,9 +140,13 @@ const Dashboard = ({ navigation }) => {
 
                 </View> */}
 
-                <View style={Styles.slider}>
-                    <CustomSlider dishes={DishesData} />
-                </View>
+                    <View style={Styles.slider}>
+                        <CustomSlider dishes={DishesData} />
+                        <View>
+                            
+                        </View>
+
+                    </View>
                 </View>
 
 

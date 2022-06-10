@@ -37,8 +37,8 @@ const Styles = StyleSheet.create({
         borderRadius: 10,
         height: 40,
         backgroundColor:'#040A07', 
-        alignContent:'center',
         justifyContent:'center',
+        alignItems:'center',
     },
     pressableText:{
         fontSize: 20,

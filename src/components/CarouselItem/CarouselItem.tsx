@@ -14,7 +14,7 @@ const CarouselItem = ({ item }, parallaxProps) => {
                         style={Styles.image}
                         {...parallaxProps}
                     />
-                    <View style={{}}>
+                <View style={{}}>
                 </View>
             </SafeAreaView>
         </Pressable>
