@@ -63,6 +63,15 @@ const Styles = StyleSheet.create({
     },
     slider:{
        
+    },
+    buyNowButton: {
+        width: 150, 
+        height: 45, 
+        backgroundColor:'black', 
+        borderRadius:7,  
+        justifyContent:'center',
+        alignItems:'center',
+        marginHorizontal: 60,
     }
 
 })

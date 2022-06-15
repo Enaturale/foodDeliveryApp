@@ -5,9 +5,10 @@ const { width: screenWidth} = Dimensions.get("window");
 
 const Styles = StyleSheet.create({
     image:{
-        height: 250,
-        width: 330,
+        height: 200,
+        width: 350,
         borderRadius: 20,
+        //resizeMode:'contain'
     },
     imageTitle:{
         fontSize: 21, 

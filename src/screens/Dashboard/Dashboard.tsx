@@ -140,12 +140,16 @@ const Dashboard = ({ navigation }) => {
 
                 </View> */}
 
-                    <View style={Styles.slider}>
+                    
                         <CustomSlider dishes={DishesData} />
-                        <View>
-                            
-                        </View>
+                  
 
+                    <View style={{flexDirection: 'row', width: 290, justifyContent:'space-between', marginBottom: 30,}}>
+                        <Pressable 
+                           style={Styles.buyNowButton}>
+                            <Text style={{fontSize: 20, color:'#F4BA19', fontFamily: 'Nunito-Black'}}>Buy Now</Text>
+                        </Pressable>
+                        <ShoppingCart name="shopping-cart" color="#F4BA19" size={30} />
                     </View>
                 </View>
 

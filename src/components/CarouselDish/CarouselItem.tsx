@@ -6,7 +6,7 @@ import Styles from "./Styles";
 const CarouselItem = ({ item }, parallaxProps) => {
     return (
         <Pressable>
-            <View style={{ height: 300, width: 340, marginVertical: 10,}}>
+            <View style={{ height: 240, width: 300, marginVertical: 10,}}>
 
                 <ParallaxImage
                     source={{ uri: item.image }}
@@ -14,7 +14,7 @@ const CarouselItem = ({ item }, parallaxProps) => {
                     style={{marginTop: 10,}}
                     {...parallaxProps}
                 />
-                <View style={{ flexDirection: 'row', justifyContent: 'space-between', width: 280, marginVertical: 5, }}>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between', width: 270, marginVertical: 5, }}>
                     <Text style={Styles.imageTitle}>{item.title}</Text>
                     <Text style={Styles.imageAmount}>${item.amount}</Text>
                 </View>

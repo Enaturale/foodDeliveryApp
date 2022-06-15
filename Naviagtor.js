@@ -71,8 +71,11 @@ export function Navigation () {
                 component={HomeStackScreen} 
                 options={{
                     headerShown: false,
-                    tabBarIcon: () => (
-                        <Home  name="home" color="#F4BA19" size={20} />
+                    tabBarIcon: ({focused}) => (
+                        <Home  name="home"  size={20} 
+                          style={{
+                            color: focused ? "#F4BA19" : "white",
+                         }} />
                     )
                     }} 
             />
@@ -82,8 +85,12 @@ export function Navigation () {
                 options={{
                     headerShown: false,
                     tabBarActiveTintColor: "#F4BA19",
-                    tabBarIcon: () =>(
-                        <Cart  name="shopping-cart" color="#F4BA19" size={20} />
+                    tabBarIcon: ({focused}) =>(
+                        <Cart  name="shopping-cart" size={20}
+                        style={{
+                            color: focused ? "#F4BA19" : "white",
+                         }}
+                         />
                     )
                     }} 
             />
