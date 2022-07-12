@@ -5,10 +5,12 @@ const { width: screenWidth} = Dimensions.get("window");
 
 const Styles = StyleSheet.create({
     image:{
-        height: 200,
-        width: 350,
+        height: 170,
+      
         borderRadius: 20,
-        //resizeMode:'contain'
+        width: 350,
+       
+       
     },
     imageTitle:{
         fontSize: 21, 
@@ -19,6 +21,16 @@ const Styles = StyleSheet.create({
     imageAmount:{
         fontSize: 19,
         fontFamily:"Nunito-BoldItalic"
+    },
+    buyNowButton: {
+        width: 150, 
+        height: 45, 
+        backgroundColor:'black', 
+        borderRadius:7,  
+        justifyContent:'center',
+        alignItems:'center',
+        marginLeft: 20,
+        
     }
 })
 

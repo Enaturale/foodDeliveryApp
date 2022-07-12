@@ -2,9 +2,12 @@ import React from "react";
 import { View, Text, FlatList, StyleSheet, Image, Pressable, Alert } from "react-native";
 import DishesData from "../../data/Dishes";
 import ShoppingCart from "react-native-vector-icons/MaterialIcons";
+import QuantitySelector from "../../components/QuantitySelector/QuantitySelector";
+import { useState } from "react";
 
 
 const TopDishes = ({ navigation }) => {
+    const [Quantity, setQuantity] = useState(0);
     const addtoCart = () => {
         Alert.alert(
             "Cart",
@@ -17,7 +20,6 @@ const TopDishes = ({ navigation }) => {
             ]
         );
         navigation.navigate("Your Orders");
-
     };
 
     return (
@@ -35,7 +37,8 @@ const TopDishes = ({ navigation }) => {
 
                             </View>
 
-                            <View style={{ flexDirection: 'row', justifyContent: 'space-between', width: 330, marginVertical: 5, }}>
+                            <View style={{ flexDirection: 'row', justifyContent: 'space-between', width: 350, marginVertical: 5, }}>
+                                {/* <QuantitySelector  quantity={Quantity} setquantity={setQuantity}/> */}
                                 <Pressable style={styles.pressBuyNow}>
                                     <Text style={styles.buyNow}>Buy Now</Text>
                                 </Pressable>
